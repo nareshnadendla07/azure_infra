@@ -1,10 +1,10 @@
 module "vnet" {
   source = "../modules/network/virtual-network"
 
+  create_resource_group         = var.create_resource_group
   vnet_name                     = var.vnet_name
   location                      = var.location
-  resource_group_name           = var.resource_group_name
-  create_resource_group         = var.create_resource_group
+  resource_group_name           = var.resource_group_name  
   address_prefixes              = var.address_prefixes
   dns_servers                   = var.dns_servers
   tags                          = var.tags
