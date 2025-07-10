@@ -86,6 +86,6 @@ module "azure_route_table" {
 
 ## 👨‍💻 Author
 
-This module is maintained by [Your Name or GitHub handle].
+This module is maintained by [Naresh Nadendla].
 
 Feel free to contribute or suggest improvements through issues and pull requests.
