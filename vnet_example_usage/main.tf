@@ -1,5 +1,5 @@
 module "vnet" {
-  source = "../network/virtual-network"
+  source = "../modules/network/virtual-network"
 
   vnet_name                     = var.vnet_name
   location                      = var.location
