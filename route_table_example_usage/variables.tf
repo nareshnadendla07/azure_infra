@@ -1,7 +1,7 @@
-variable "nsg_name" {
-  description = "The name of the Network Secuirity Group."
+variable "rt_name" {
+  description = "The name of the Route Table."
   type        = string
-  default     = "my-nsg"
+  default     = "my-rt"
 }
 
 variable "location" {
@@ -16,6 +16,11 @@ variable "resource_group_name" {
   default     = "my-network-rg"
 }
 
+variable "subnet_name" {
+  description = "The Name of the Subnet."
+  type        = string
+}
+
 
 variable "tags" {
   description = "Tags to apply to all resources."
@@ -24,14 +29,4 @@ variable "tags" {
     environment = "dev"
     owner       = "infra-team"
   }
-}
-
-variable "log_analytics_workspace_id" {
-  description = "The ID of the Log Analytics Workspace for diagnostics."
-  type        = string
-}
-
-variable "subnet_name" {
-  description = "The Name of the Subnet."
-  type        = string
 }
