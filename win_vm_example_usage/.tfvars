@@ -8,13 +8,12 @@ location = "australiaeast"
 
 resource_group_name = "p-eau-proc-rg"
 
-address_prefixes = ["172.19.6.0/24"]
+address_prefixes = ["/24"]
 
-dns_servers = ["172.19.0.132"]
+dns_servers = [""]
 
 log_analytics_workspace_name = "p-global-secops-law"
 
-log_analytics_workspace_id = "/subscriptions/3b862a13-3ce3-4197-bc0c-31cb70b5a579/resourceGroups/p-global-workspace-rg/providers/Microsoft.OperationalInsights/workspaces/p-global-secops-law"
 
 
 tags = {
@@ -29,31 +28,31 @@ tags = {
 
 nuix_subnet_name = "p-eau-nuix-snet"
 
-nuix_subnet_address_prefix = "172.19.8.0/26"
+nuix_subnet_address_prefix = 
 
 forensic_subnet_name = "p-eau-frc-snet"
 
-forensic_subnet_address_prefix = "172.19.6.0/26"
+forensic_subnet_address_prefix = 
 
 download_subnet_name = "p-eau-dnl-snet"
 
-download_subnet_address_prefix = "172.19.6.64/28"
+download_subnet_address_prefix =
 
 default_subnet_name = "p-eau-default-snet"
 
-default_subnet_address_prefix = "172.19.6.128/28"
+default_subnet_address_prefix = 
 
 core_subnet_name = "p-eau-core-snet"
 
-core_subnet_address_prefix = "172.19.6.160/27"
+core_subnet_address_prefix = 
 
 sql_subnet_name = "p-eau-sql-snet"
 
-sql_subnet_address_prefix = "172.19.6.192/27"
+sql_subnet_address_prefix =
 
 public_subnet_name = "p-eau-proc-public-snet"
 
-public_subnet_address_prefix = "172.19.6.80/28"
+public_subnet_address_prefix =
 
 
 ###################
@@ -101,14 +100,7 @@ mwd_asg_name = "p-eau-mwd-asg"
 ## Storage Account
 ##################
 
-storage_account_name                      = "peauprocst"
-evd_storage_account_name                  = "peauprocevidencest"
-cases_storage_account_name                = "peauproccasesst"
-matter_storage_account_name               = "peauprocmattersst"
-legal_storage_account_name                = "peauproclegalst"
-admin_storage_account_name                = "peauprocadminst"
-nuix_storage_account_name                 = "peauprocnuixst"
-tmp_storage_account_name                  = "peauproctmpst"
+storage_account_name                      = "test"
 account_tier                              = "Standard"
 account_rlication_type                  = "ZRS"
 account_kind                              = "StorageV2"
@@ -137,22 +129,9 @@ key_vault_key_name  = "p-eau-proc-kv-disk-key"
 
 key_vault_sku_pricing_tier = "standard"
 enable_rbac                = false
-certificate_name          = "star-ashurstsolutions-com"
-certificate_pfx_file_path = "./star_ashurstsolutions_com.pfx"
-certificate_subject       = "SSL Certificate for My WorkDrive Application GateWay"
-certificate_password      = "goanywhere"
+
 
 ## Private Endpoint 
-
-mssql_private_dns_zone_resource_ids = ["subscriptions/a5e05aaf-3ac0-40e9-bf67-e70a4817ee70/resourceGroups/p-azdns-zones-rg/providers/Microsoft.Network/privateDnsZones/privatelink.database.windows.net"]
-
-sa_private_dns_zone_resource_ids = [
-  "subscriptions/a5e05aaf-3ac0-40e9-bf67-e70a4817ee70/resourceGroups/p-azdns-zones-rg/providers/Microsoft.Network/privateDnsZones/privatelink.file.core.windows.net"
-]
-
-evd_private_dns_zone_resource_ids = [
-  "subscriptions/a5e05aaf-3ac0-40e9-bf67-e70a4817ee70/resourceGroups/p-azdns-zones-rg/providers/Microsoft.Network/privateDnsZones/privatelink.blob.core.windows.net"
-]
 
 
 ########
